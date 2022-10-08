@@ -12,10 +12,12 @@ module.exports = env => {
         output: {
             path: path.join(__dirname, '/dist'), 
             filename: 'bundle.js',
+            publicPath: '/', // For React Router
             clean: true
         },
         devServer: {
-            port: 3010
+            port: 3010, 
+            historyApiFallback: true
         },
         module: {
             rules: [
